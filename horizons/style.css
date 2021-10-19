@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700|Montserrat:300,400&display=swap');
+
+:root {
+    --green: #32b777;
+    --white: #fff;
+    --gray: #555;
+    --lightgray: #ececec;
+    --darkgray: rgb(34, 34, 34);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    color: var(--gray);
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6    ;
+    
+}
+h1, h2, h3, h4 {
+    font-family: 'Comfortaa', cursive;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.clearfix::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+button{
+    background: var(--green);
+    padding: 10px 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    color: var(--white);
+    margin-bottom: 150px;
+    margin-top: 40px;
+}
+/* hgroup{
+    text-align: center;
+    padding: 50px;
+} */
+
+/* header */
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(img/horiznos-header.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    
+}
+header nav ul li a{
+    color: var(--lightgray);
+    margin: 10px 30px;
+    font-size: 1.1rem;
+}
+nav .logo{
+    color: var(--lightgray);
+    font-size: 2rem ;
+}
+ 
+header h1{
+    color: var(--lightgray);
+    text-align: center;
+    margin-top: 80px;
+    font-size: 3rem;
+
+}
+header p{
+    color: var(--lightgray);
+    text-align: center;
+    padding-top: 30px;
+
+}
+header hgroup{
+    text-align: center;
+    padding: 50px;
+}
+
+/* about */
+
+
+.about{
+    background:var(--lightgray);
+}
+.about .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.about .container img{
+    width: 100%;
+}
+.about .container div{
+    flex: 0 0 32%;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.about hgroup h2{
+    font-size: 2.5rem;
+}
+.about hgroup p{
+    font-size: 1.2rem;
+    
+}
+.about hgroup{
+        text-align: center;
+        padding: 50px;
+}
+/* blog */
+.blog hgroup h2{
+    font-size: 2.5rem;
+}
+.blog hgroup p{
+    font-size: 1.2rem;
+
+    
+}
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+.icons div{
+    flex: 1 1 50%;
+    padding: 30px;
+   
+
+}
+.icons p{
+    line-height: 1.4;
+}
+
+.icons div i{
+    
+    background: var(--green);
+    color: white;
+    padding: 10px;
+    font-size: 3rem;
+    border-radius: 5px;
+    
+}
+.icons i{
+    float: left;
+    margin-right: 20px;
+}
+
+.blog hgroup{
+    text-align: center;
+    padding-top: 100px;
+}
+.blog h3{
+    font-size: 1.5rem;
+}
+
+/* footer */
+
+footer section{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .container article{
+    flex: 0 0 33%;
+    padding-top:100px;
+    padding-right: 50px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-content: space-between;
+}
+footer a{
+    text-decoration: underline;
+    color: var(--lightgray);
+}
+
+footer{
+    background: var(--gray);
+    color: var(--lightgray);
+}
+.container::after{
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: var(--lightgray);
+    margin: 40px auto;
+    
+}
+.copy{
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 768px){
+    header nav ul li a {
+        margin: 10px 5px;
+    }
+    .about hgroup h2 {
+        font-size: 2rem;
+    }
+    .about .container {
+        flex-direction: column;
+    }
+    footer section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    footer{text-align: center;}
+    header hgroup {
+        text-align: center;
+        padding: 10px;
+    }
+    header h1 {
+        color: var(--lightgray);
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+    }
+    .blog hgroup h2 {
+        font-size: 2.5rem;
+    }
+    .blog hgroup {
+        text-align: center;
+        padding-top: 30px;
+    }
+}
+

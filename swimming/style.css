@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300;400;700&display=swap');
+:root { 
+    --blue: rgb(64, 115, 222);
+    --navlink1 : rgb(174, 92, 252);
+    --navlinks2: rgb(21, 94, 209);
+    --lightorange: rgb(255, 175, 0);
+    --orange: rgb(255, 134, 21);
+    --lightred: rgb(255, 47, 79);
+    --red: rgb(255, 27, 153);
+    --lightviolet: rgb(254, 20, 229);
+    --violet: rgb(182, 31, 224);
+    --lightgray: rgb(243, 243, 243);
+    --text: #505050;
+    --black: #000;
+    --white: #fff;
+    --transition: .4s ease;
+    --fontSize: 16px;
+    --headings: 'Montserrat', sans-serif;
+    --bodyText:  'Roboto', sans-serif;
+}
+/************************
+    basic styles
+************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--bodyText);
+    font-size: var(--fontSize);
+    color: var(--text);
+    line-height: 1.6;
+}
+.container {
+
+    width: 85%;
+    margin: auto;
+}
+h1, h2, h3, h4, h5 ,h6 {
+    font-family: var(--headings);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+/* NAV */
+.logo{
+    font-size: 2.5rem;
+    color: var(--blue);
+    font-weight: 700;
+}
+.active{
+    background:linear-gradient(to top,rgb(64, 115, 222),rgb(174, 92, 252));
+    padding: 50px 20px;
+    color: white;
+}
+.nactive{
+    padding: 50px 20px;
+
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    display: flex;
+    margin-right: 50px;
+}
+nav ul li a{
+    font-size: 1.5rem;
+    color: var(--black);
+    font-weight: 700;
+}
+header{
+    background: url(img/header.png);
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+}
+/* INFO */
+.info{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.info div{
+    color: var(--white);
+    margin-top: -150px;
+
+    padding: 20px 40px 0px 20px;
+    flex: 0 0 23.5%;
+}
+.info div:first-child{
+    background:linear-gradient(to top,rgb(255, 134, 21),rgb(255, 175, 0));
+}
+.info div:nth-of-type(2){
+    background:linear-gradient(to top,rgb(64, 115, 222),rgb(174, 92, 252));
+    
+}
+.info div:nth-of-type(3){
+    background:linear-gradient(to top,rgb(255, 27, 153),rgb(255, 47, 79));
+}
+.info div:nth-of-type(4){
+    background:linear-gradient(to top,rgb(182, 31, 224),rgb(254, 20, 229));
+}
+.info div{
+    display: flex;
+    flex-direction: column;
+}
+.info div h2{
+    font-size: 2.5rem;
+    padding-bottom: 40px;
+    font-weight: 700;
+}
+.info div p{
+
+    font-size: 1.2rem;
+    padding-right: 1.5em;
+    /* margin-bottom: 50px; */
+    text-align: left;
+
+    line-height: 1.2;
+}
+.info div .text{
+    display: flex;
+    align-items: flex-end;
+}
+.strelica{
+    font-size: 2.5rem;
+    position: relative;
+    left: 100%;
+    color: var(--white);
+    position: relative;
+    top: -50px;
+}
+.text{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* SKOLA */
+.skola{
+    margin-top: 30px;
+}
+.art{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.skola .art:last-child{
+    width: 100%;
+}
+.img img{
+    width: 100%;
+}
+.art .tekst{
+    background: var(--lightgray);
+    padding: 50px;
+    flex: 0 0  49%;
+}
+.art .img{
+    flex: 0 0 49%;
+}
+.skola .art h3{
+    font-size: 2.5rem;
+    padding: 30px 0;
+    color: black;
+}
+.skola .art p{
+    font-size: 1.2rem;
+}
+.skola .art .order{
+    order: -1;
+
+}
+
+/* NO1 */
+.no1{
+    margin-top: 30px;
+    background:url(/img/swimer2.png);
+    background-position: center;
+    background-size: cover;
+}
+.no1 .about{
+    padding: 70px;
+    background:linear-gradient(to top,rgba(255, 27, 153, .8),rgba(255, 47, 79, .8));
+    color: var(--white);
+    width: 48%;
+}
+.about h2{
+    font-size: 2.5rem;
+    padding: 30px;
+    color: white;
+}
+.about p{
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    color: white;
+    
+}
+.about button{
+    background: var(--lightgray);
+    color: var(--black);
+    padding: 10px 30px;
+    border: none;
+    transition: var(--transition);
+    margin: 30px 0;
+    font-size: 1.5rem;
+    margin-left: 30px;
+    font-weight: 400;
+}
+/* EVENTS */
+.our{
+    background:linear-gradient(to top,rgb(255, 134, 21),rgb(255, 175, 0));
+}
+.events{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}
+.slika {
+    width: 100%;
+    flex: 0 0 49%;
+}
+.slika img{
+    width: 100%;
+}
+
+.our{
+    flex: 0 0 49%;
+    color: var(--white);
+}
+.our h2{
+    padding: 50px;
+    font-size: 2.5rem;
+}
+.our ul{
+    font-size: 1.2rem;
+    padding: 0 70px;
+}
+.our ul li {
+    padding: 10px 0;
+}
+.our a{
+    color: var(--white);
+}
+
+
+.skola button{
+    background: linear-gradient(to right,rgb(255, 175, 0),rgb(255, 47, 79));
+    color: var(--white);
+    padding: 10px 30px;
+    border: none;
+    transition: var(--transition);
+    margin: 30px 0;
+    font-size: 1.5rem;
+}
+.skola button:hover{
+    /* background:rgb(255, 47, 79); */
+    transition: var(--transition);
+    cursor: pointer;
+    
+}
+
+/* PLIVACI */
+.sivo{
+    background: var(--lightgray);
+
+}
+.swimers{
+    display: flex;
+    justify-content: space-between;
+}
+.plivaci{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 23.5%;
+}
+.plivaci img{
+
+    position: relative;
+    bottom: -100px;
+}
+.sivo h4{
+    text-align: left;
+    color: var(--orange);
+    font-size: 1.5rem;
+    padding: 15px 30px;
+}
+.sivo p{
+    padding: 150px 20px 25px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* CONTACTS */
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.contactInfo{
+    flex: 0 0 49%;
+    background:linear-gradient(to top,rgb(21, 94, 209),rgb(135, 206, 250));
+    color: var(--white);
+}
+.map{
+    width: 100%;
+    flex: 0 0 49%;
+}
+.map iframe{
+    width: 100%;
+}
+.contactInfo h2{
+    padding: 20px 50px;
+    font-size: 2.5rem;
+}
+.contactInfo p{
+    font-size: 1.2rem;
+    padding: 0 70px;
+}
+.icons a{
+    font-size: 2.5rem;
+    color:  white;
+    margin-right: 20px;
+
+}
+.icons{
+    padding: 0 70px;
+}
+
+
+.mob a{
+    font-size: 1.9rem;
+    color: white;
+}
+.icons a :first-child{
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 2rem;
+    color: var(--blue);
+    background: white;
+    border-radius: 50%;
+}
+
+.mob a i{
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 2rem;
+    color: var(--blue);
+    background: white;
+    border-radius: 50%;
+    margin-left: 70px;
+    margin-bottom: 30px;
+
+}
+
+@media (max-width: 764px){
+    header {
+        height: 50vh;
+    }
+    body{
+        line-height: 1.3;
+    }
+    nav ul li a{
+        font-size: 1rem;
+        color: var(--black);
+        font-weight: 700;
+    }
+    .container{
+        width: 90%;
+        margin: auto;
+    }
+    .active{
+        background:linear-gradient(to top,rgb(64, 115, 222),rgb(174, 92, 252));
+        padding:10px;
+    }
+    .nactive{
+        padding:10px;
+    
+    }
+    nav{
+        text-align: center;
+        padding: 0;
+    }
+    nav ul li{
+        justify-content: space-between;
+        margin: 0px 0px;
+    }
+    .logo{
+        margin-left: 40px;
+    }
+
+    /* INFO */
+
+    .info{
+        flex-direction: row;
+        flex-wrap: wrap;
+        top: -100px;
+        margin-bottom: -130px;
+        
+    }
+    .info div{
+        color: var(--white);
+        margin-top: -0;
+        padding: 20px;
+        flex: 1 0 25%;
+    }
+
+    .info div h2{
+        font-size: 1.5rem;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .info div p {
+        padding-right: 5px;
+        margin-bottom: 10px;
+        text-align: left;
+        font-size: .9rem;
+        padding-left: 10px;
+    }
+    .strelica{
+        font-size: 1.5rem;
+        top: -50px;
+    }
+    /* SKOLA */
+
+    .skola .art {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 15px 0;
+    }
+    .skola .art h3 {
+        font-size: 1.5rem;
+        padding: 20px 0;
+    }
+    .skola .art p {
+        font-size: .9rem;
+    }
+    button{
+        font-size: 1.2rem;
+    }
+    .tekst{
+        order: -1;
+    }
+    .tekst2{
+        order: -1;
+    }
+    .no1 .about {
+        padding: 10px;
+        background: linear-gradient(to top,rgba(255, 27, 153, .8),rgba(255, 47, 79, .8));
+        color: var(--white);
+        width: 60%;
+    }
+    .about h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    .about p {
+        font-size: .8rem;
+        padding: 5px 15px;
+    }
+    .skola button {
+        background: linear-gradient(to right,rgb(255, 175, 0),rgb(255, 47, 79));
+        color: var(--white);
+        padding: 5px 15px;
+        border: none;
+        transition: var(--transition);
+        margin: 20px 0;
+        font-size: 1rem;
+    }
+    .about button {
+        background: var(--lightgray);
+        color: var(--black);
+        padding: 5px 15px;
+        border: none;
+        transition: var(--transition);
+        margin: 30px 0;
+            margin-left: 0px;
+        font-size: 1.1rem;
+        margin-left: 30px;
+        font-weight: 400;
+    }
+    .no1{
+        background-position: center;
+        background-size: cover;
+        margin-top: 50px;
+        position: relative;
+    }
+    .skola{
+        margin-top: 50px;
+    }
+    .events{
+        flex-direction: column;
+        margin-top: 25px;
+
+    }
+    .our h2 {
+        padding: 20px;
+        font-size: 2rem;
+    }
+    .our ul li {
+        padding: 10px 0;
+    }
+    .our ul {
+        font-size: 1rem;
+    }
+    .flexBetween{
+        flex-direction: column;
+    }
+    .our ul {
+        font-size: 1rem;
+        padding: 0 40px;
+    }
+    .our{
+        margin-bottom: 25px;
+    }
+    
+    .slika img{
+        width: 100%;
+    }
+    .swimers{
+        flex-direction: column;
+    }
+    .sivo p{
+        text-align: left;
+        line-height: 1.5    ;
+    }
+    .contacts{
+        flex-direction: column;
+    }
+    .contactInfo{
+        order: -1;
+    }
+    .contactInfo p {
+        font-size: 1.1rem;
+        padding: 0 30px;
+    }
+    .mob a i {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 1.5rem;
+        color: var(--blue);
+        background: white;
+        border-radius: 50%;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    
+}
+.icons {
+    padding: 20px 30px;
+}
+.icons a {
+    font-size: 1rem;
+    color: white;
+}
+
+.icons a :first-child {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    color: var(--blue);
+    background: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+}
+.map iframe{
+    width: 100%;
+    margin-top: 25px;
+
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+}
+
+
+
+
+
+
+    
+
+

@@ -1,0 +1,317 @@
+/*
+https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
+
+#ef233c  crvena
+#414141  tamno siva
+*/
+@import url('https://fonts.googleapis.com/css?family=Gugi|Kaushan+Script|Source+Sans+Pro');
+
+:root{
+    --crvena: rgb(239, 35, 60);
+    --tamnoSiva: rgb(65, 65, 65);
+    --lightgray: #f9f9f9;
+    --transition: .3s ease;
+}
+/* img{
+    width: 100%;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.7;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kaushan Script', cursive;
+}
+a{
+    text-decoration: none;
+    color: var(--tamnoSiva);
+}
+ul{
+    list-style: none;
+}
+button{
+    cursor: pointer;
+    transition: var(--transition);
+    background-color: var(--crvena);
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+button:hover{
+    background: var(--tamnoSiva);
+
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+/******** 
+HEADER 
+*********/
+header{
+    background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(img/header.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 30px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 30px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul li a{
+    margin-left: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+nav ul li a:hover{
+    color: var(--crvena);
+    transition: var(--transition);
+}
+.logo{
+    line-height: 15px;
+    text-align: center;
+    padding-top: 10px;
+    
+}
+.logo::first-letter{
+    color: var(--crvena);
+}
+nav span{
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-family: "Gugi";
+    font-weight: bold;
+}
+header hgroup{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    padding: 0 100px;
+    align-items: center;
+    text-align: center;
+}
+hgroup h1{
+    font-size: 3rem;
+}
+hgroup p{
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+/* ONE */
+.one{
+    display: flex;
+}
+.one .text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+.one .img{
+    background-image: url(img/one.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+.one .text h4{
+    color: var(--crvena);
+    font-family: 'Source Sans Pro';
+    padding-bottom: 20px;
+    position: relative;
+}
+.one .text h4::after{
+    content: "";
+    width: 100px;
+    height: 3px;
+    background: var(--crvena);
+    position: absolute;
+    top: 35px;
+    left: 0%;
+}
+.one .text p{
+    padding: 30px 0;
+}
+/* TWO */
+.two{
+    background-color: #f8f8f8;;
+    padding: 50px 0;
+}
+.two .row:first-child{
+    text-align: center;
+    padding: 0 150px;
+}
+.two .row:first-child h4{
+    color: var(--crvena);
+    font-family: 'Source Sans Pro';
+    padding: 30px 0;
+}
+.two .underline{
+    display: block;
+    content: "";
+    height: 3px;
+    width: 100px;
+    background-color: var(--crvena);
+    margin: 0 auto 20px auto;
+}
+.two .row:first-child p{
+    padding: 40px 0;
+}
+.two .row:last-child{
+    display: flex;
+}
+.two .col{
+    flex: 1;
+    margin: 20px 40px 20px 40px;
+}
+.two .row:last-child .col:nth-child(1) h3::before{
+        font-family: "Font Awesome 5 Brands";
+        content: "\f099";
+        color: var(--crvena);
+}
+.two .row:last-child .col:nth-child(2) h3::before{
+    font-family: "Font Awesome 5 Brands";
+    content: "\f179";
+    color: var(--crvena);
+}
+.two .row:last-child .col:nth-child(3) h3::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f140";
+    color: var(--crvena);
+}
+.two .col p{
+    padding-bottom: 20px;
+}
+.two .col a{
+    color: var(--crvena);
+    font-weight: bold;
+    transition: var(--transition);
+}
+.two .col a:hover{
+    color: var(--tamnoSiva);
+}
+/* three */
+.three{
+    background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(img/three.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 50px;
+}
+.three h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--crvena);
+}
+.three h2{
+    font-size: 2rem;
+}
+.three p{
+    padding: 20px 0;
+}
+/* FOUR */
+hgroup{
+    text-align: center;
+    margin: 40px 0;
+}
+hgroup h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--crvena);
+}
+hgroup h2{
+    font-size: 3rem;
+}
+
+.four{
+    margin: 40px auto;
+    width: 90%;
+}
+.four .row {
+    display: flex;
+}
+.four .col{
+    flex: 0 0 50%;
+
+}
+.four .img1{
+    background-image: url(img/people1.jpg);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+.four .img2{
+    background-image: url(img/people2.jpg);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+.four .img3{
+    background-image: url(img/people3.jpg);
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+.four .row:nth-child(2) .text{
+    order: -1;
+    text-align: right;
+}
+.four .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+
+}
+
+.four .icons{
+    display: flex;
+    /* justify-content: space-between; */
+    padding-top: 30px;
+    font-size: 1.7rem;
+}
+.four .icons i{
+    color: var(--crvena);  
+}
+.four .icons li{
+    flex: 1;
+    
+}
+.four h3{
+    color: var(--crvena);
+    font-size: 2rem;
+}
+.four h5{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+

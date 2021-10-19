@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Fondamento|Nunito:300,400&display=swap');
+:root {
+    --crna: #292f36;    /* rgba(41, 47, 54, .7) */
+    --zelena: #4ecdc4;  /* rgb(78, 205, 196) */
+    --bela: #fff;
+    --crvena: #ff6b6b;  /* rgb(255, 107, 107) */
+    --svetlosiva: #ede8e8;
+    --transition: .3s ease;
+}
+
+/* basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fondamento', cursive;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+button{
+    background: transparent;
+    color: var(--crvena);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--crvena);
+    margin: 30px 0;
+    transition: var(--transition);
+}
+button:hover{
+    cursor: pointer;
+    color: var(--bela);
+    background: var(--crvena);
+}
+.container{
+    width: 70%;
+    margin: auto;
+}
+.container2{
+    width: 30%;
+    margin: auto;
+}
+/* header */
+header{
+    background-image:linear-gradient(rgba(41, 47, 54, .8),rgba(41, 47, 54, .8)), url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 70vh;
+    
+}
+header h1{
+    color: var(--bela);
+    font-size: 3rem; 
+    padding-top: 200px;
+}
+header p{
+    color: var(--bela);
+}
+
+
+/* main */
+main section{
+    background: var(--svetlosiva);
+}
+section .container{
+    display: flex;
+    flex-direction: row;
+}
+section .container:first-child{
+    display: flex;
+    padding-top: 50px;
+    
+}
+section .container:first-child img{
+    width: 100%;
+    flex: 0 0 50%;
+    
+}
+section .container:first-child div{
+    background: var(--bela);
+    flex: 0 0 50%;
+    align-items: center;
+    padding: 50px;
+    
+}
+section .container:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+section .container:last-child img{
+    width: 100%;
+    flex: 0 0 50%;
+    
+}
+section .container:last-child div{
+    background: var(--bela);
+    flex: 0 0 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: right;  
+    padding: 50px;  
+}
+
+/* gallery */
+
+section.container h2{
+    color: var(--crvena);
+    font-size: 2rem;
+    text-align: center;
+    padding: 50px;
+}
+.row{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.row .col img{
+    width: 100%;
+}
+.row .col{
+    flex: 0 0 23%;
+}
+.row button{
+    margin-top: 300px;
+}
+
+/* footer */
+footer section{
+    background:#ff8380;
+}
+footer section h2{
+    text-align: center;
+    margin-top: 100px;
+    color: var(--crna);
+    font-size: 2rem;
+    padding-top: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    
+    
+}  
+form {
+    flex: 1;
+} 
+
+input{
+    background:#ff9e9c;
+    border: none;
+}
+textarea{
+    background:#ff9e9c;
+    border: none;
+}
+
+.icons{
+    text-align: center;
+  
+}
+
+i{
+    font-size: 1rem;
+    color:var(--crvena) ;
+    background:var(--bela);
+    padding: 10px;
+    border-radius: 50%;
+    margin: 50px 10px;
+    
+
+}
+/* responsive */
+@media (max-width:768px){
+    header {
+        height: 40vh;
+    }
+    header h1 {
+        color: var(--bela);
+        font-size: 2rem;
+        padding-top: 50px;
+    }
+    body {
+        font-family: 'Nunito', sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    section .container {
+        flex-direction: column;
+    }
+    section .container:last-child {
+        flex-direction: column-reverse;
+    }
+    .row {
+        padding: 30px;
+        flex-direction: column;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .col{
+        margin: 20px auto;
+        
+    }
+    .col img{
+        width: 100%;
+    }
+    .row button {
+        margin-top: 30px;
+    }
+    .icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container2{
+        width: 80%;
+    }
+    footer section h2 {
+        padding-top: 50px;
+    }
+    section .container:last-child div {
+        text-align: left;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 0%;
+    }
+    .container{
+        width: 90%;
+    }
+    .container2{width: 93%;}
+
+
+}
